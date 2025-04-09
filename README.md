@@ -19,9 +19,9 @@ That means:
 
 As a result:
 
-* Trying to access http://<minikube-ip>:<nodePort> from your Mac might fail.
+* Trying to access `http://<minikube-ip>:<nodePort>` from your Mac might fail.
 
-* You have to use minikube service or kubectl port-forward to tunnel traffic from your host into the cluster.
+* You have to use `minikube service` or `kubectl port-forward` to tunnel traffic from your host into the cluster.
 
 I open multiple terminals shells and run commands separately in each:
 
@@ -29,3 +29,10 @@ I open multiple terminals shells and run commands separately in each:
 kubectl port-forward svc/fleetman-queue 30010:8161
 kubectl port-forward svc/fleetman-webapp 30081:8080
 ~~~
+
+another approach with `service`:
+~~~bash
+minikube service fleetman-webapp
+~~~
+
+
