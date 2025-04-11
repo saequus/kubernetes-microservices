@@ -1,11 +1,22 @@
 # kubernetes-microservices
 
+
 Exercises from course Kubernetes Microservices by Richard Chesterwood.
 
-Tested on MacOS Sequoia in 2025.
+Examples are valid only for MacOS with minikube implementation on Docker Desktop.
+
+Tested on MacOS Sequoia with minikube on Docker Desktop in 2025.
 
 
 ## Comments
+
+### `NodePort` replaced to make it work
+
+Because of minikube implementation on Docker Desctop, services of type `NodePort` are replaced with `ClusterIP`.
+
+
+
+### Port forwarding
 
 If you're using MacOS, expect that specifying type: NodePort should expose your app automatically on `<Minikube IP>:<NodePort>`. It usually does — but on MacOS, there's a special situation that explains why it doesn't just work.
 
